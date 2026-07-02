@@ -1,0 +1,20 @@
+$breakpoint-mobile: 360px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+:root {
+  --color-primary-dark: #233849;
+  --color-primary-blue: #4d799d;
+  --color-gray-dark: #727272;
+  --color-gray-medium: #b9b9b9;
+  --color-gray-light: #d9d9d9;
+  --color-yellow: #f2b124;
+
+  --color-white: #ffffff;
+  --color-black: #000;
+  --font-main:
+    "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue",
+    sans-serif;
+
+  --transition-smooth: all 0.3s ease-in-out;
+}

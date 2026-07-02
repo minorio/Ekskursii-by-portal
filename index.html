@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/scss/main.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ekskursii-by-portal</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <a href="#" class="header__logo">
+          <img src="./src/assets/logo.png" alt="logo" />
+        </a>
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Программа</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#schedule" class="header__menu-link js-scroll-to"
+                >Расписание</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Отзывы</a>
+            </li>
+            <li class="header__menu-item header__menu-item--has-dropdown">
+              <a href="#" class="header__menu-link"
+                >Контакты
+                <span class="arrow">
+                  <svg
+                    class="arrow-icon"
+                    width="10"
+                    height="6"
+                    viewBox="0 0 10 6"
+                    fill="none"
+                    xmlns="http://w3.org"
+                  >
+                    <path
+                      d="M1 1L5 5L9 1"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </a>
+              <div class="header__dropdown-content dropdown-contacts">
+                <a href="tel:+375297566665" class="dropdown-contacts__phone">
+                  <img src="./src/assets/header-phone-icon.png" alt="" /> +375
+                  29 756-66-65
+                </a>
+                <div class="dropdown-contacts__socials">
+                  <a href="#"
+                    ><img src="./src/assets/header-viber-icon.png" alt=""
+                  /></a>
+                  <a href="#"
+                    ><img src="./src/assets/header-telegram-icon.png" alt=""
+                  /></a>
+                  <a href="#"
+                    ><img src="./src/assets/header-whatsup-icon.png" alt=""
+                  /></a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="header__controls">
+            <li class="header__dropdown header__dropdown--has-content">
+              BYN
+              <span class="arrow">
+                <svg
+                  class="arrow-icon"
+                  width="10"
+                  height="6"
+                  viewBox="0 0 10 6"
+                  fill="none"
+                  xmlns="http://w3.org"
+                >
+                  <path
+                    d="M1 1L5 5L9 1"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <ul class="header__dropdown-content dropdown-currency">
+                <li
+                  class="dropdown-currency__item dropdown-currency__item--active"
+                >
+                  BYN
+                </li>
+                <li class="dropdown-currency__item">RUB</li>
+                <li class="dropdown-currency__item">EUR</li>
+              </ul>
+            </li>
+            <li class="header__dropdown header__dropdown--has-content">
+              РУС
+              <span class="arrow">
+                <svg
+                  class="arrow-icon"
+                  width="10"
+                  height="6"
+                  viewBox="0 0 10 6"
+                  fill="none"
+                  xmlns="http://w3.org"
+                >
+                  <path
+                    d="M1 1L5 5L9 1"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <ul class="header__dropdown-content dropdown-lang">
+                <li class="dropdown-lang__item dropdown-lang__item--active">
+                  РУС
+                </li>
+                <li class="dropdown-lang__item">BEL</li>
+                <li class="dropdown-lang__item">ENG</li>
+              </ul>
+            </li>
+          </ul>
+          <button class="button header__btn">бронировать</button>
+          <button class="burger header__burger" aria-label="Открыть меню">
+            <span class="burger__line"></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container hero__container">
+        <h1 class="hero__title">
+          Экскурсия <br />
+          Тысячелетний Брест и <br />
+          Брестская крепость
+        </h1>
+        <p class="hero__subtitle">
+          Погрузитесь в историю наследия заповедной памяти
+        </p>
+        <div class="hero__actions">
+          <button class="button hero__btn">РАСПИСАНИЕ</button>
+          <a
+            href="#schedule"
+            class="hero__scroll-down"
+            aria-label="Скролл вниз"
+          >
+            <div class="hero__arrows-wave">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="schedule" id="schedule">
+      <div class="container">
+        <h2 class="schedule__title">
+          Расписание экскурсии <br />Тысячелетний Брест и Брестская крепость
+        </h2>
+        <form class="schedule__form search-form" id="search-form">
+          <div class="search-form__field">
+            <label class="search-form__label">Дата с</label>
+            <div class="search-form__input-wrapper">
+              <input
+                type="text"
+                id="date-from"
+                class="search-form__input"
+                placeholder="Дд.Мм.Гггг"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="search-form__field">
+            <label class="search-form__label">Дата по</label>
+            <div class="search-form__input-wrapper">
+              <input
+                type="text"
+                id="date-to"
+                class="search-form__input"
+                placeholder="Дд.Мм.Гггг"
+                required
+              />
+            </div>
+          </div>
+          <div class="search-form__field">
+            <label class="search-form__label">Кол-во взрослых</label>
+            <select class="search-form__select">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+          <div class="search-form__field">
+            <label class="search-form__label">Кол-во детей</label>
+            <select class="search-form__select">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+          </div>
+          <button type="submit" class="button search-form__btn">Поиск</button>
+        </form>
+        <div class="schedule__grid">
+          <div
+            class="schedule-card schedule-card--no-places"
+            data-date="2026-07-18"
+          >
+            <div class="schedule-card__main">
+              <div class="schedule-card__date">18.07.2026 (чт.)</div>
+              <div class="schedule-card__time">
+                Начало: 18:00 ~ 4 ч. 15 мин.
+              </div>
+              <div class="schedule-card__status">Нет мест</div>
+            </div>
+            <div class="schedule-card__price-box">
+              <div class="schedule-card__price">
+                60.00 BYN / <br class="price-br" />55.00 BYN
+              </div>
+            </div>
+          </div>
+          <div class="schedule-card" data-date="2026-07-14">
+            <div class="schedule-card__main">
+              <div class="schedule-card__date">14.07.2026 (чт.)</div>
+              <div class="schedule-card__time">
+                Начало: 18:00 ~ 4 ч. 15 мин.
+              </div>
+              <div
+                class="schedule-card__status schedule-card__status--available"
+              >
+                Осталось мест: 2
+              </div>
+            </div>
+            <div class="schedule-card__price-box">
+              <div class="schedule-card__price">
+                60.00 BYN / <br class="price-br" />55.00 BYN
+              </div>
+
+              <button class="button schedule-card__btn">Бронировать</button>
+            </div>
+          </div>
+          <div class="schedule-card" data-date="2026-07-04">
+            <div class="schedule-card__main">
+              <div class="schedule-card__date">04.07.2026 (чт.)</div>
+              <div class="schedule-card__time">
+                Начало: 18:00 ~ 4 ч. 15 мин.
+              </div>
+              <div
+                class="schedule-card__status schedule-card__status--available"
+              >
+                Осталось мест: 2
+              </div>
+            </div>
+            <div class="schedule-card__price-box">
+              <div class="schedule-card__price">
+                60.00 BYN / <br class="price-br" />55.00 BYN
+              </div>
+
+              <button class="button schedule-card__btn">Бронировать</button>
+            </div>
+          </div>
+          <div class="schedule-card" data-date="2026-08-01">
+            <div class="schedule-card__main">
+              <div class="schedule-card__date">01.08.2026 (чт.)</div>
+              <div class="schedule-card__time">
+                Начало: 18:00 ~ 4 ч. 15 мин.
+              </div>
+              <div
+                class="schedule-card__status schedule-card__status--available"
+              >
+                Осталось мест: 2
+              </div>
+            </div>
+            <div class="schedule-card__price-box">
+              <div class="schedule-card__price">
+                60.00 BYN / <br class="price-br" />55.00 BYN
+              </div>
+
+              <button class="button schedule-card__btn">Бронировать</button>
+            </div>
+          </div>
+          <div class="schedule-card" data-date="2026-07-19">
+            <div class="schedule-card__main">
+              <div class="schedule-card__date">19.07.2026 (чт.)</div>
+              <div class="schedule-card__time">
+                Начало: 18:00 ~ 4 ч. 15 мин.
+              </div>
+              <div
+                class="schedule-card__status schedule-card__status--available"
+              >
+                Осталось мест: 2
+              </div>
+            </div>
+            <div class="schedule-card__price-box">
+              <div class="schedule-card__price">
+                60.00 BYN / <br class="price-br" />55.00 BYN
+              </div>
+
+              <button class="button schedule-card__btn">Бронировать</button>
+            </div>
+          </div>
+          <div
+            id="schedule-empty-message"
+            class="schedule__empty-message"
+            style="display: none"
+          >
+            На указанные даты экскурсий не найдено. Попробуйте выбрать другой
+            диапазон!
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="container">
+        <h2 class="reviews__title">Отзывы наших клиентов</h2>
+        <div class="reviews__slider slider-reviews">
+          <div class="slider-reviews__track" id="reviews-track">
+            <div class="slider-reviews__slide">
+              <div class="review-card">
+                <div class="review-card__header">
+                  <img
+                    src="./src/assets/avatar.png"
+                    alt="Марина"
+                    class="review-card__avatar"
+                  />
+                  <div class="review-card__info">
+                    <h3 class="review-card__name">
+                      Марина,
+                      <span class="review-card__city">Санкт-Петербург</span>
+                    </h3>
+                    <div class="review-card__stars">
+                      <img src="./src/assets/star-full.png" alt="star" />
+                      <img src="./src/assets/star-full.png" alt="star" />
+                      <img src="./src/assets/star-full.png" alt="star" />
+                      <img src="./src/assets/star-full.png" alt="star" />
+                      <img src="./src/assets/star.png" alt="star" />
+                    </div>
+                    <span class="review-card__date">11-Июня-2026</span>
+                    <p class="review-card__text">
+                      Поездка очень понравилась! Усадьба Огинского, которого
+                      знают все, но о нем знают меньше. Быт белорусской усадьбы
+                      атмосфере. Три очень интересных костела, православный
+                      храм. Гид Юрий рассказывал интересно, видна любовь к
+                      родному краю, что всегда вдохновляет. Три очень интересных
+                      костела, православный храм. Гид Юрий рассказывал
+                      интересно, видна любовь к родному краю, что всегда
+                      вдохновляет. Три очень интересных костела, православный
+                      храм. Гид Юрий рассказывал интересно, видна любовь к
+                      родному краю, что всегда вдохновляет. Три очень интересных
+                      костела, православный храм. Гид Юрий рассказывал
+                      интересно, видна любовь к родному краю, что всегда
+                      вдохновляет.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-reviews__slide">
+              <div class="review-card">
+                <div class="review-card__header">
+                  <img
+                    src="./src/assets/avatar.png"
+                    alt="Марина"
+                    class="review-card__avatar"
+                  />
+                  <div class="review-card__info">
+                    <h3 class="review-card__name">
+                      Марина,
+                      <span class="review-card__city">Санкт-Петербург</span>
+                    </h3>
+                    <div class="review-card__stars">
+                      <img src="./src/assets/star-full.png" alt="star" />
+                      <img src="./src/assets/star-full.png" alt="star" />
+                      <img src="./src/assets/star-full.png" alt="star" />
+                      <img src="./src/assets/star-full.png" alt="star" />
+                      <img src="./src/assets/star.png" alt="star" />
+                    </div>
+                    <span class="review-card__date">11-Июня-2026</span>
+                    <p class="review-card__text">
+                      Поездка очень понравилась! Усадьба Огинского, которого
+                      знают все, но о нем знают меньше. Быт белорусской усадьбы
+                      атмосфере. Три очень интересных костела, православный
+                      храм.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-reviews__slide">
+              <div class="review-card">
+                <div class="review-card__header">
+                  <img
+                    src="./src/assets/avatar.png"
+                    alt="Марина"
+                    class="review-card__avatar"
+                  />
+                  <div class="review-card__info">
+                    <h3 class="review-card__name">
+                      Марина,
+                      <span class="review-card__city">Санкт-Петербург</span>
+                    </h3>
+                    <div class="review-card__stars">
+                      <img src="./src/assets/star-full.png" alt="star" />
+                      <img src="./src/assets/star-full.png" alt="star" />
+                      <img src="./src/assets/star-full.png" alt="star" />
+                      <img src="./src/assets/star-full.png" alt="star" />
+                      <img src="./src/assets/star.png" alt="star" />
+                    </div>
+                    <span class="review-card__date">11-Июня-2026</span>
+                    <p class="review-card__text">
+                      Поездка очень понравилась! Усадьба Огинского, которого
+                      знают все, но о нем знают меньше. Быт белорусской усадьбы
+                      атмосфере. Три очень интересных костела, православный
+                      храм.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-reviews__slide">
+              <div class="review-card">
+                <div class="review-card__header">
+                  <img
+                    src="./src/assets/avatar.png"
+                    alt="Марина"
+                    class="review-card__avatar"
+                  />
+                  <div class="review-card__info">
+                    <h3 class="review-card__name">
+                      Марина,
+                      <span class="review-card__city">Санкт-Петербург</span>
+                    </h3>
+                    <div class="review-card__stars">
+                      <img src="./src/assets/star-full.png" alt="star" />
+                      <img src="./src/assets/star-full.png" alt="star" />
+                      <img src="./src/assets/star-full.png" alt="star" />
+                      <img src="./src/assets/star-full.png" alt="star" />
+                      <img src="./src/assets/star.png" alt="star" />
+                    </div>
+                    <span class="review-card__date">11-Июня-2026</span>
+                    <p class="review-card__text">
+                      Поездка очень понравилась! Усадьба Огинского, которого
+                      знают все, но о нем знают меньше. Быт белорусской усадьбы
+                      атмосфере. Три очень интересных костела, православный
+                      храм.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reviews__controls">
+          <button
+            class="reviews__arrow reviews__arrow--prev"
+            id="review-prev"
+            aria-label="Предыдущий отзыв"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+            >
+              <path
+                d="M13.4815 4.8519C13.1235 4.49392 12.5431 4.49392 12.1852 4.8519L6.68515 10.3519C6.51324 10.5238 6.41667 10.757 6.41667 11.0001C6.41667 11.2432 6.51324 11.4764 6.68515 11.6483L12.1851 17.1483C12.5431 17.5062 13.1235 17.5062 13.4815 17.1483C13.8395 16.7903 13.8395 16.2099 13.4815 15.8519L8.62969 11.0001L13.4815 6.14826C13.8395 5.79028 13.8395 5.20988 13.4815 4.8519Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+          <button
+            class="reviews__arrow reviews__arrow--next"
+            id="review-next"
+            aria-label="Следующий отзыв"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+            >
+              <path
+                d="M8.51849 4.8519C8.87647 4.49392 9.45687 4.49392 9.81485 4.8519L15.3148 10.3519C15.4868 10.5238 15.5833 10.757 15.5833 11.0001C15.5833 11.2432 15.4868 11.4764 15.3148 11.6483L9.81485 17.1483C9.45687 17.5062 8.87647 17.5062 8.51849 17.1483C8.16051 16.7903 8.16051 16.2099 8.51849 15.8519L13.3703 11.0001L8.51849 6.14826C8.1605 5.79028 8.1605 5.20988 8.51849 4.8519Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__main">
+          <div class="footer__contacts">
+            <a href="#" class="footer__logo">
+              <img src="./src/assets/logo-full.png" alt="Ekskursii.by" />
+            </a>
+            <h4 class="footer__subtitle">Контакты</h4>
+            <ul class="footer__phones">
+              <li>
+                <a href="tel:+375173944913" class="footer__link">
+                  <img src="./src/assets/phone-icon.png" alt="Телефон" /> +375
+                  17 394-49-13
+                </a>
+              </li>
+              <li>
+                <a href="tel:+375297566665" class="footer__link">
+                  <img src="./src/assets/phone-icon.png" alt="Мобильный" /> +375
+                  29 756-66-65
+                </a>
+              </li>
+            </ul>
+            <div class="footer__socials">
+              <a href="#" class="footer__social-link"
+                ><img src="./src/assets/viber-icon.png" alt="Viber"
+              /></a>
+              <a href="#" class="footer__social-link"
+                ><img src="./src/assets/telegram-icon.png" alt="Telegram"
+              /></a>
+              <a href="#" class="footer__social-link"
+                ><img src="./src/assets/whatsup-icon.png" alt="WhatsApp"
+              /></a>
+            </div>
+          </div>
+          <div class="footer__info">
+            <p class="footer__company-name">
+              © Частное научно-производственное унитарное предприятие <br />
+              "Автоматизированные технологии туризма"
+            </p>
+            <p class="footer__legal-text">
+              Свидетельство о регистрации №1808 от 9.08.2007 выдано Минским
+              горисполкомом. УНП: 190855081 Сертификат соответствия
+              туристических услуг СТБ № BY/112 04.03. 071.01 00099 выдан
+              Национальным агентством по туризму РБ, действителен до 22.10.2029
+              г.
+            </p>
+          </div>
+        </div>
+        <hr class="footer__line" />
+        <div class="footer__bottom">
+          <p>
+            © 2007-2026 Частное научно-производственное унитарное предприятие
+            "Автоматизированные технологии туризма"
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

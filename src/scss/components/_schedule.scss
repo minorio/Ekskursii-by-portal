@@ -1,0 +1,282 @@
+.schedule {
+  padding: 40px 0;
+  background-color: var(--color-white);
+
+  &__title {
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 30px;
+  }
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 24px;
+  width: 100%;
+  max-width: 1280px;
+  background-color: var(--color-white);
+  padding: 25px;
+  border-radius: 3px;
+  min-height: 129px;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+  }
+
+  &__label {
+    color: var(--color-primary-dark);
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__input,
+  &__select {
+    width: 100%;
+    height: 35px;
+    padding: 0 40px 0 12px;
+    background-color: transparent;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid var(--color-gray-light);
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 12px) center;
+    background-size: 23px auto;
+    &:focus {
+      border-color: var(--color-primary-blue);
+    }
+    &::placeholder {
+      color: var(--color-gray-medium);
+    }
+  }
+  &__input {
+    color: var(--color-primary-dark);
+    background-image: url("../../assets/calendar.svg");
+    cursor: pointer;
+    min-width: 262px;
+  }
+  &__select {
+    color: var(--color-primary-dark);
+    appearance: none;
+    min-width: 100px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("../../assets/calendar-arrow-down.svg");
+  }
+  &__btn {
+    color: var(--color-white);
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: none;
+    border: 1px solid var(--color-primary-blue);
+    border-radius: 3px;
+    background-color: var(--color-primary-blue);
+    max-width: 200px;
+    width: 100%;
+    height: 35px;
+    cursor: pointer;
+    outline: none;
+    transition: var(--transition-smooth);
+
+    &:hover {
+      background-color: inherit;
+      color: var(--color-primary-blue);
+    }
+  }
+}
+
+.schedule-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: var(--color-white);
+  padding: 10px;
+  min-height: 103px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__date {
+    color: var(--color-primary-dark);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__time {
+    color: var(--color-black);
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__status {
+    color: var(--color-gray-dark);
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: auto;
+
+    &--available {
+      color: var(--color-black);
+    }
+  }
+
+  &__price-box {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__price {
+    color: var(--color-primary-dark);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+  }
+  .price-br {
+    display: none;
+  }
+  &__btn {
+    height: 30px;
+    max-width: 112px;
+    padding: 0 15px;
+    background-color: var(--color-yellow);
+    color: var(--color-white);
+    border-radius: 3px;
+    text-transform: none;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    outline: none;
+    cursor: pointer;
+    border: 2px solid var(--color-yellow);
+    transition: var(--transition-smooth);
+
+    &:hover {
+      color: var(--color-yellow);
+      background-color: transparent;
+    }
+  }
+
+  &--no-places {
+    background-color: inherit;
+    .schedule-card__date,
+    .schedule-card__time,
+    .schedule-card__status,
+    .schedule-card__price {
+      color: var(--color-gray-dark);
+    }
+  }
+}
+
+.schedule__empty-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px;
+  background-color: var(--color-white);
+  border: 1px dashed var(--color-gray-medium);
+  border-radius: 6px;
+  color: var(--color-gray-dark);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media (max-width: 1023px) {
+  .schedule__grid {
+    grid-template-columns: 1fr;
+  }
+  .schedule-card {
+    .price-br {
+      display: inline;
+    }
+  }
+  .search-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+    width: 100%;
+    min-height: auto;
+
+    &__field {
+      width: 100%;
+    }
+
+    &__input {
+      min-width: 0;
+    }
+
+    &__select {
+      min-width: 0;
+    }
+
+    &__btn {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .schedule {
+    padding: 20px 0;
+  }
+  .search-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    min-height: auto;
+    padding: 20px;
+
+    &__field {
+      width: 100%;
+    }
+
+    &__input,
+    &__select {
+      min-width: 0;
+    }
+
+    &__btn {
+      grid-column: 1 / -1;
+      width: 100%;
+      margin-top: 5px;
+    }
+  }
+
+  .schedule {
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .search-form {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}

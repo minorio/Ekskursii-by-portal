@@ -1,0 +1,23 @@
+@import "variables";
+@import "components/header";
+@import "components/hero";
+@import "components/schedule";
+@import "components/reviews";
+@import "components/footer";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1310px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
