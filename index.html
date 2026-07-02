@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ekskursii-by-portal</title>
+    <script type="module" crossorigin src="/Ekskursii-by-portal/assets/index-D2yQd0hw.js"></script>
+    <link rel="stylesheet" crossorigin href="/Ekskursii-by-portal/assets/index-bpUC7Fxy.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <a href="#" class="header__logo">
+          <img src="data:image/png;base64,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" alt="logo" />
+        </a>
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Программа</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#schedule" class="header__menu-link js-scroll-to"
+                >Расписание</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a href="#" class="header__menu-link">Отзывы</a>
+            </li>
+            <li class="header__menu-item header__menu-item--has-dropdown">
+              <a href="#" class="header__menu-link"
+                >Контакты
+                <span class="arrow">
+                  <svg
+                    class="arrow-icon"
+                    width="10"
+                    height="6"
+                    viewBox="0 0 10 6"
+                    fill="none"
+                    xmlns="http://w3.org"
+                  >
+                    <path
+                      d="M1 1L5 5L9 1"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </a>
+              <div class="header__dropdown-content dropdown-contacts">
+                <a href="tel:+375297566665" class="dropdown-contacts__phone">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAWNJREFUeAGVk09OwkAUxr83VQzRBUfoDeAIdKeJaI8giTFx50rADbAxYaWsTAyInsAuXLir3KBHqDdgQTQBZ55TQk0ZirTfqp037/fevD+EpWrN4RkIZUvN+l7vMkROUQIyWh6EQs2cvDCxcCZqxwcM2EoUfLfxYCOHxHFr4DJ4xSmGVa9GpcwgMJXTDBFsvyhPkRm0SYSJVPMxsoIU8JlmkJDOe46Ci8Ke8EhHNw38I2zkkPC69YlkdE3DrkV3eTpH8Uet9eTrPKpJI4OC6Tc5H/f1yTbQX7HniuqaG65G4cpBkVdmytUjcXQ9cM1sKfnj3jxWFCyfGSXjUqjz6whljZVgP5o7cwPITDG5LqaipiSDJGGU5vAfbA2+hNGmC9EzJe+8wlifVDE/b5xs7/Yi0A1w9EIH2MpBQMigk+awzYTOmiGqmeTOW++8nwkU6bAxsgWpqsVYLDlbHE6/rJd4xn4BK3OXCp1Llp8AAAAASUVORK5CYII=" alt="" /> +375
+                  29 756-66-65
+                </a>
+                <div class="dropdown-contacts__socials">
+                  <a href="#"
+                    ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAA4BJREFUeAGlVU1ME0EUfjPFAikmRRMQL1AiMRE1BQ8SFfmpB8WIHDCRxAMENPFg4CbiAbiAxAvEm4KExISLB6hEuQAlKoGD0oQfEyVt4UCVBGmkTUtLd5w3tWvZ7haqX7KbnXmz73vzvTfzCCRATcugMZgm1egolAEj5YQwI2NgRBsDYudjO2HMZu1uGkrkh2g5l9KlFm5tjjrdx4lLAhga627s0LArCB4O5kmUTTFgeZAkkIxKwYqRnvsuxXwMQdtzswS6qYNEnwCe8G644u3Te/Y4ErEDnTT/nwQykU4KFkV3JJNUP3rpVJPIkKYHy7kCMOUchezMDHne5w/CgtMNs0ursOHxxrGgdL/8tMjW2+DRRQgGOhjfjHJh0/Xz0HKrVDhcRIfLq7DgcIsnFN4VxC21l8XaRed35e9GfQoLfP1gnSZau7AUF8Btixkev3i3J9KszMOcdAd8geCfcQa03bHA5KcVsM4sKYk8235qojdaB+rVZKqzFEHf6/eCAL+rLxRGnBoNQr5KHgRiY8sL/WNzUH2xEFRgNKSHb1LAg6YARoe5QAnO5OcIEnyyjBngdP8UNsKPY2XxCVkqQ7pe2JWgDMopAWJWGrK5JA73pvh2rG8KabyBHTHGb5QLU5uRlir/gzvKyownAULKUxhjZkgAdGr9uASnTcfk3Ex8XpEjxwfnozlSk4zCATA8MS+comR/dxMUMqmVr5IkhRDwKA/gj61tIVksul5NQFfTNRE5EmL59o/NwtyXNWFHqbR2QxkjHuUk6ouOMMGxc83PRsUpKzmVKw5m3ZUimcCQqhdFoQSvXLvu5KVqM/8xLi/6FB2Uns2XI0WEdsMwt7zGc/JNjLF0Mfrm2lJBELs2CsLIOA0DTIMKMNmm40eg90ENl+bIHhvmwzqzDCWFudB1t0rYMW9qkAizkZp23jtCklPrYrSIs0DEldLHCaNl6uMl7VjH6Fdhgp92jXy43nQ3miLXSutAOyPQARrAKwZzpHUZaoEH3jH2pLFTlDBNpX08WpfWYqyoZAk4XEgg/ONrpLPBE5JIBZaz2urhyfnkCLifEO+Q0aF8GMd7GlwUwppEyRCEuZ/xmBYc1+Ov8g55iPd4+Icez+HCHYwn6vGxiBQDqT8QGd4aEvR6A7QPO2G8eR9U8X7D22cZI8ws39goqYSyMptEqM3nJ6NqzqP4DRg9qgcBu3b4AAAAAElFTkSuQmCC" alt=""
+                  /></a>
+                  <a href="#"
+                    ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAArNJREFUeAGtVU1ME1EQntldEAImqweiHhRI0PiXFDXBhAMlcDCGv6sHIwRiYmIiNwEP4gmJl3I1IOHmgQMgaC/aVjmoB+2BxL/ENl5QE6UJarDQHWc27mbb7m5L4Uuavvdm9/tmvvf2DYIPegan9a3KTBARu4GQ/0knAl1iBBjneRyJogtjAzN+POgV6BqeGuXoDYu0AEnSAJhZHOsf9YjnZH9zutZQKEJAtbBNiJhipFvnxq8lc9YdAiP3AwaokWKy90Eqs5VpfXzvajxPxKxANd7uUMAWUo10o1WRYq2aFu2OgEA3lPKINTFFZJNL2QM/EEBtx9DUbVuEXbsCJaKqohy6mk9CjV6dF0OEwSB/Blrn0FRvKVWcrj8Il9oa4VTdAXMuIpNLr3If0/fuoRaNa2mR2raTtfxk7MTvjbT7S2j0aAgYoAIqkrUQNx0/bK/NL69A+7mjttjn1R8eIhjUiCgAHlmfP3EE2s422JYIvq2tw8TsCzPmrOb72i/wgK65rYrXbpZI9g+fxWGgownazjRkxRKrP8FThE9Ayvl9CHHNPjkplJe9EN263J5VmcDTqv9guzDFhLaIbKAQTvDYIhNyWQ9d74H6Q/vzSHys4lQprgFf1Xy59Lo9sJL4Cs4KqyvLXIl8rAIkjCug4hwUAalkZPIJPH3zKS/mZ5eBFFVUDWOyL1AExBbTytnnPF7PWvdAcokbmvo+Nr9xrLm7gi0LQpEQe16++wJVleXmOPz6g+tzfKBCH5cXYvZV3zn8IAG7e0kmH43118nAvuo3DWwt1raCYJ5N7pDW1BYJj/clFcjsXIjfzzBP2NGC83r8Be6QZdzASrQuKRWE/Xq8E13ccAixtygxuTUMCC3e7b/jHi6Ai9xvVIAWQgrIjW2RgiG2UjRDytyfvxiLhvo8bf4H1SciBz79gfUAAAAASUVORK5CYII=" alt=""
+                  /></a>
+                  <a href="#"
+                    ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAA4xJREFUeAGdVU1IVFEUPvfNZA4qjApO08IcoUWZ4LQxilCzRRlNLiKIWigOQSvdRDYu1EWKuEihVWomBQUV+JM6C38mspBAHTBdJIzjRktQhxwZHXvvds8d3+M5771R+2Dm/Zx3z3f+D4EEKK/ptkaTpXKTAEVASTEh1EopWFFGgfjZs59Q6utvdvck0kOMlEsWqYZJq2WlBygJSgA9n5qrGgzkcQSPu3MkgY5ToDlwRCCZIEVLelseBuPeqwg8LwokMI0fxvoECIl/xZKh1gd+DQn3wCTNGBGkJCdB7slMyEpP5c+rG2GYDawYEpmkqFP2SCFxPXm5qBciVO66lMd/eL+6scnfZ6WnwW9GNDa9AG9HZzQsGLo/EcHpa6sMmWMEXQ16BGh1k7uMVRKFp69HYHFlHba2owr5hbPZcLfUCVfOn4a6jiFYDYWVsxQgJzVZqma3jcTIC5lgNrAMnYPfFeV6hnjul3KtNc/74sWhzYjgEG7WdlXoeYEWogftHycgxYJWn9Ilwdw0vRkFW0YaPxMHa4pFvCUANpqOdaUsBO0fviiEaO05xwlDov6vc+C6mKeRCRSKBQKkIF6Qa8+ErUgUfiz+4s/5uXZ+NfIGgSToscOesV9ASLFAKdWQ4IeBlTXleXRqIXadXjAkwZzhDw2Mg1WAQwCtxNJ13yhU3mF16SG8vaMlIQRC8W+xFNUWoYWezmGwsVx1PLrDw1d9+zK/LzyTzb/BPMb6KKwhZuEiGpLJuSUeX3Wi8TASEewZ93WeHySV85XvsLPm3OS9pAarUL8Z2KhmJyvUArR8cn6Jd7mcfJnI3fqekyNJOLIDA9/muRdYgSNTPzVeEEr8ZhHgswn2kyBSLcchsLwGekBimRxD5Ll3lffUuzG/5luJUJ856bjQK+1Kz9SDEQ+itTgAMdk2NqewstA79Tfojdy0dR3DevYEB9lCM/c2VoZctV1tLGQNsgSnLQIVIBFPPGtGvGLIMF+x6qLQNzHHQ6Y3dpjhr3jI8K+8vtsqRikbpbHxIidcPRAx7tg/tr1RH1he3yfX82KgucqhkCCusX2SlGCfHAmsLXbFqNO7t0+UZvS2VAYFEEv0+uaoBCLT41WtYM2OR4+OsR0P/7HjGYK7bMd7E+14NVgx1FNCKg5FxqynErSFt4V23IRa8QEoY/uG9VERJbRAmdgYUgnDSn0SEXxbEdKnp1zGP9+eqw4qA00cAAAAAElFTkSuQmCC" alt=""
+                  /></a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="header__controls">
+            <li class="header__dropdown header__dropdown--has-content">
+              BYN
+              <span class="arrow">
+                <svg
+                  class="arrow-icon"
+                  width="10"
+                  height="6"
+                  viewBox="0 0 10 6"
+                  fill="none"
+                  xmlns="http://w3.org"
+                >
+                  <path
+                    d="M1 1L5 5L9 1"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <ul class="header__dropdown-content dropdown-currency">
+                <li
+                  class="dropdown-currency__item dropdown-currency__item--active"
+                >
+                  BYN
+                </li>
+                <li class="dropdown-currency__item">RUB</li>
+                <li class="dropdown-currency__item">EUR</li>
+              </ul>
+            </li>
+            <li class="header__dropdown header__dropdown--has-content">
+              РУС
+              <span class="arrow">
+                <svg
+                  class="arrow-icon"
+                  width="10"
+                  height="6"
+                  viewBox="0 0 10 6"
+                  fill="none"
+                  xmlns="http://w3.org"
+                >
+                  <path
+                    d="M1 1L5 5L9 1"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <ul class="header__dropdown-content dropdown-lang">
+                <li class="dropdown-lang__item dropdown-lang__item--active">
+                  РУС
+                </li>
+                <li class="dropdown-lang__item">BEL</li>
+                <li class="dropdown-lang__item">ENG</li>
+              </ul>
+            </li>
+          </ul>
+          <button class="button header__btn">бронировать</button>
+          <button class="burger header__burger" aria-label="Открыть меню">
+            <span class="burger__line"></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container hero__container">
+        <h1 class="hero__title">
+          Экскурсия <br />
+          Тысячелетний Брест и <br />
+          Брестская крепость
+        </h1>
+        <p class="hero__subtitle">
+          Погрузитесь в историю наследия заповедной памяти
+        </p>
+        <div class="hero__actions">
+          <button class="button hero__btn">РАСПИСАНИЕ</button>
+          <a
+            href="#schedule"
+            class="hero__scroll-down"
+            aria-label="Скролл вниз"
+          >
+            <div class="hero__arrows-wave">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="schedule" id="schedule">
+      <div class="container">
+        <h2 class="schedule__title">
+          Расписание экскурсии <br />Тысячелетний Брест и Брестская крепость
+        </h2>
+        <form class="schedule__form search-form" id="search-form">
+          <div class="search-form__field">
+            <label class="search-form__label">Дата с</label>
+            <div class="search-form__input-wrapper">
+              <input
+                type="text"
+                id="date-from"
+                class="search-form__input"
+                placeholder="Дд.Мм.Гггг"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="search-form__field">
+            <label class="search-form__label">Дата по</label>
+            <div class="search-form__input-wrapper">
+              <input
+                type="text"
+                id="date-to"
+                class="search-form__input"
+                placeholder="Дд.Мм.Гггг"
+                required
+              />
+            </div>
+          </div>
+          <div class="search-form__field">
+            <label class="search-form__label">Кол-во взрослых</label>
+            <select class="search-form__select">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+          <div class="search-form__field">
+            <label class="search-form__label">Кол-во детей</label>
+            <select class="search-form__select">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+          </div>
+          <button type="submit" class="button search-form__btn">Поиск</button>
+        </form>
+        <div class="schedule__grid">
+          <div
+            class="schedule-card schedule-card--no-places"
+            data-date="2026-07-18"
+          >
+            <div class="schedule-card__main">
+              <div class="schedule-card__date">18.07.2026 (чт.)</div>
+              <div class="schedule-card__time">
+                Начало: 18:00 ~ 4 ч. 15 мин.
+              </div>
+              <div class="schedule-card__status">Нет мест</div>
+            </div>
+            <div class="schedule-card__price-box">
+              <div class="schedule-card__price">
+                60.00 BYN / <br class="price-br" />55.00 BYN
+              </div>
+            </div>
+          </div>
+          <div class="schedule-card" data-date="2026-07-14">
+            <div class="schedule-card__main">
+              <div class="schedule-card__date">14.07.2026 (чт.)</div>
+              <div class="schedule-card__time">
+                Начало: 18:00 ~ 4 ч. 15 мин.
+              </div>
+              <div
+                class="schedule-card__status schedule-card__status--available"
+              >
+                Осталось мест: 2
+              </div>
+            </div>
+            <div class="schedule-card__price-box">
+              <div class="schedule-card__price">
+                60.00 BYN / <br class="price-br" />55.00 BYN
+              </div>
+
+              <button class="button schedule-card__btn">Бронировать</button>
+            </div>
+          </div>
+          <div class="schedule-card" data-date="2026-07-04">
+            <div class="schedule-card__main">
+              <div class="schedule-card__date">04.07.2026 (чт.)</div>
+              <div class="schedule-card__time">
+                Начало: 18:00 ~ 4 ч. 15 мин.
+              </div>
+              <div
+                class="schedule-card__status schedule-card__status--available"
+              >
+                Осталось мест: 2
+              </div>
+            </div>
+            <div class="schedule-card__price-box">
+              <div class="schedule-card__price">
+                60.00 BYN / <br class="price-br" />55.00 BYN
+              </div>
+
+              <button class="button schedule-card__btn">Бронировать</button>
+            </div>
+          </div>
+          <div class="schedule-card" data-date="2026-08-01">
+            <div class="schedule-card__main">
+              <div class="schedule-card__date">01.08.2026 (чт.)</div>
+              <div class="schedule-card__time">
+                Начало: 18:00 ~ 4 ч. 15 мин.
+              </div>
+              <div
+                class="schedule-card__status schedule-card__status--available"
+              >
+                Осталось мест: 2
+              </div>
+            </div>
+            <div class="schedule-card__price-box">
+              <div class="schedule-card__price">
+                60.00 BYN / <br class="price-br" />55.00 BYN
+              </div>
+
+              <button class="button schedule-card__btn">Бронировать</button>
+            </div>
+          </div>
+          <div class="schedule-card" data-date="2026-07-19">
+            <div class="schedule-card__main">
+              <div class="schedule-card__date">19.07.2026 (чт.)</div>
+              <div class="schedule-card__time">
+                Начало: 18:00 ~ 4 ч. 15 мин.
+              </div>
+              <div
+                class="schedule-card__status schedule-card__status--available"
+              >
+                Осталось мест: 2
+              </div>
+            </div>
+            <div class="schedule-card__price-box">
+              <div class="schedule-card__price">
+                60.00 BYN / <br class="price-br" />55.00 BYN
+              </div>
+
+              <button class="button schedule-card__btn">Бронировать</button>
+            </div>
+          </div>
+          <div
+            id="schedule-empty-message"
+            class="schedule__empty-message"
+            style="display: none"
+          >
+            На указанные даты экскурсий не найдено. Попробуйте выбрать другой
+            диапазон!
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="container">
+        <h2 class="reviews__title">Отзывы наших клиентов</h2>
+        <div class="reviews__slider slider-reviews">
+          <div class="slider-reviews__track" id="reviews-track">
+            <div class="slider-reviews__slide">
+              <div class="review-card">
+                <div class="review-card__header">
+                  <img
+                    src="/Ekskursii-by-portal/assets/avatar-FDvFy_8V.png"
+                    alt="Марина"
+                    class="review-card__avatar"
+                  />
+                  <div class="review-card__info">
+                    <h3 class="review-card__name">
+                      Марина,
+                      <span class="review-card__city">Санкт-Петербург</span>
+                    </h3>
+                    <div class="review-card__stars">
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAARNJREFUeAGVksFKw0AQhmdmE7LVIiL0HhTBkzl7Ejx4ELFvoOCDKM0b2DeoT6Cg4GMkRy2CvkBJ9NCI3Z1uCps27UKbgYVhd775d/8dZGYCR/y+HN0Qad6++Hh0naMLzF+PQ1LjzzL35da+PE+/l2ucaqSKO5v/F+P7jRQX1Wy4VDF/O9nDYtRF1BED7ALoU7Md1vvzF4BIESBhFqnf8hPMnw4TRI6gWTyba+IAGkapTDvd9wck6DWAeu2rYTwzpn05jDeBLVTmlaPa7/TXgTqY11QgTX7WGkTFKFoBESbLYMYM9b8jWAVZ6dAC5Vs46Byw1zqru64r0LOJErIv1F/mSTlYmJLMrFszTbE5uxaBrJpMAXMXZF5l4eiSAAAAAElFTkSuQmCC" alt="star" />
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAARNJREFUeAGVksFKw0AQhmdmE7LVIiL0HhTBkzl7Ejx4ELFvoOCDKM0b2DeoT6Cg4GMkRy2CvkBJ9NCI3Z1uCps27UKbgYVhd775d/8dZGYCR/y+HN0Qad6++Hh0naMLzF+PQ1LjzzL35da+PE+/l2ucaqSKO5v/F+P7jRQX1Wy4VDF/O9nDYtRF1BED7ALoU7Md1vvzF4BIESBhFqnf8hPMnw4TRI6gWTyba+IAGkapTDvd9wck6DWAeu2rYTwzpn05jDeBLVTmlaPa7/TXgTqY11QgTX7WGkTFKFoBESbLYMYM9b8jWAVZ6dAC5Vs46Byw1zqru64r0LOJErIv1F/mSTlYmJLMrFszTbE5uxaBrJpMAXMXZF5l4eiSAAAAAElFTkSuQmCC" alt="star" />
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAARNJREFUeAGVksFKw0AQhmdmE7LVIiL0HhTBkzl7Ejx4ELFvoOCDKM0b2DeoT6Cg4GMkRy2CvkBJ9NCI3Z1uCps27UKbgYVhd775d/8dZGYCR/y+HN0Qad6++Hh0naMLzF+PQ1LjzzL35da+PE+/l2ucaqSKO5v/F+P7jRQX1Wy4VDF/O9nDYtRF1BED7ALoU7Md1vvzF4BIESBhFqnf8hPMnw4TRI6gWTyba+IAGkapTDvd9wck6DWAeu2rYTwzpn05jDeBLVTmlaPa7/TXgTqY11QgTX7WGkTFKFoBESbLYMYM9b8jWAVZ6dAC5Vs46Byw1zqru64r0LOJErIv1F/mSTlYmJLMrFszTbE5uxaBrJpMAXMXZF5l4eiSAAAAAElFTkSuQmCC" alt="star" />
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAARNJREFUeAGVksFKw0AQhmdmE7LVIiL0HhTBkzl7Ejx4ELFvoOCDKM0b2DeoT6Cg4GMkRy2CvkBJ9NCI3Z1uCps27UKbgYVhd775d/8dZGYCR/y+HN0Qad6++Hh0naMLzF+PQ1LjzzL35da+PE+/l2ucaqSKO5v/F+P7jRQX1Wy4VDF/O9nDYtRF1BED7ALoU7Md1vvzF4BIESBhFqnf8hPMnw4TRI6gWTyba+IAGkapTDvd9wck6DWAeu2rYTwzpn05jDeBLVTmlaPa7/TXgTqY11QgTX7WGkTFKFoBESbLYMYM9b8jWAVZ6dAC5Vs46Byw1zqru64r0LOJErIv1F/mSTlYmJLMrFszTbE5uxaBrJpMAXMXZF5l4eiSAAAAAElFTkSuQmCC" alt="star" />
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAP1JREFUeAGVksENgjAUhltpAhcS4wREB2ADTEzg6gaaOIgGNpANcANvHIgzwAAmsgEn4AL41whWbARe0vDS/33vp32lTdPMiCSiKNpDa2zbvsh0KgMBGXVd33muadrSsqy0XyN1A3Rs87IsT6McRbc2ZK40DMOFoijbqqpMSukce2sso2fwgEECPcZKVFWNGZIbHDhE/oQBnTfbogEpiuLKfzMgE4M7zxzHOSN3J3AuGO91MTwZCbvv2s84dF33hyicr6vpwDzPzSGQMWb+gOj2BeICMuylPUcpaLQAPi5GtMJ8N0S4dRFkgoMPIcNwA+GV8CYHvCYPjXZca+ufEdN2srXHdg4AAAAASUVORK5CYII=" alt="star" />
+                    </div>
+                    <span class="review-card__date">11-Июня-2026</span>
+                    <p class="review-card__text">
+                      Поездка очень понравилась! Усадьба Огинского, которого
+                      знают все, но о нем знают меньше. Быт белорусской усадьбы
+                      атмосфере. Три очень интересных костела, православный
+                      храм. Гид Юрий рассказывал интересно, видна любовь к
+                      родному краю, что всегда вдохновляет. Три очень интересных
+                      костела, православный храм. Гид Юрий рассказывал
+                      интересно, видна любовь к родному краю, что всегда
+                      вдохновляет. Три очень интересных костела, православный
+                      храм. Гид Юрий рассказывал интересно, видна любовь к
+                      родному краю, что всегда вдохновляет. Три очень интересных
+                      костела, православный храм. Гид Юрий рассказывал
+                      интересно, видна любовь к родному краю, что всегда
+                      вдохновляет.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-reviews__slide">
+              <div class="review-card">
+                <div class="review-card__header">
+                  <img
+                    src="/Ekskursii-by-portal/assets/avatar-FDvFy_8V.png"
+                    alt="Марина"
+                    class="review-card__avatar"
+                  />
+                  <div class="review-card__info">
+                    <h3 class="review-card__name">
+                      Марина,
+                      <span class="review-card__city">Санкт-Петербург</span>
+                    </h3>
+                    <div class="review-card__stars">
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAARNJREFUeAGVksFKw0AQhmdmE7LVIiL0HhTBkzl7Ejx4ELFvoOCDKM0b2DeoT6Cg4GMkRy2CvkBJ9NCI3Z1uCps27UKbgYVhd775d/8dZGYCR/y+HN0Qad6++Hh0naMLzF+PQ1LjzzL35da+PE+/l2ucaqSKO5v/F+P7jRQX1Wy4VDF/O9nDYtRF1BED7ALoU7Md1vvzF4BIESBhFqnf8hPMnw4TRI6gWTyba+IAGkapTDvd9wck6DWAeu2rYTwzpn05jDeBLVTmlaPa7/TXgTqY11QgTX7WGkTFKFoBESbLYMYM9b8jWAVZ6dAC5Vs46Byw1zqru64r0LOJErIv1F/mSTlYmJLMrFszTbE5uxaBrJpMAXMXZF5l4eiSAAAAAElFTkSuQmCC" alt="star" />
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAARNJREFUeAGVksFKw0AQhmdmE7LVIiL0HhTBkzl7Ejx4ELFvoOCDKM0b2DeoT6Cg4GMkRy2CvkBJ9NCI3Z1uCps27UKbgYVhd775d/8dZGYCR/y+HN0Qad6++Hh0naMLzF+PQ1LjzzL35da+PE+/l2ucaqSKO5v/F+P7jRQX1Wy4VDF/O9nDYtRF1BED7ALoU7Md1vvzF4BIESBhFqnf8hPMnw4TRI6gWTyba+IAGkapTDvd9wck6DWAeu2rYTwzpn05jDeBLVTmlaPa7/TXgTqY11QgTX7WGkTFKFoBESbLYMYM9b8jWAVZ6dAC5Vs46Byw1zqru64r0LOJErIv1F/mSTlYmJLMrFszTbE5uxaBrJpMAXMXZF5l4eiSAAAAAElFTkSuQmCC" alt="star" />
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAARNJREFUeAGVksFKw0AQhmdmE7LVIiL0HhTBkzl7Ejx4ELFvoOCDKM0b2DeoT6Cg4GMkRy2CvkBJ9NCI3Z1uCps27UKbgYVhd775d/8dZGYCR/y+HN0Qad6++Hh0naMLzF+PQ1LjzzL35da+PE+/l2ucaqSKO5v/F+P7jRQX1Wy4VDF/O9nDYtRF1BED7ALoU7Md1vvzF4BIESBhFqnf8hPMnw4TRI6gWTyba+IAGkapTDvd9wck6DWAeu2rYTwzpn05jDeBLVTmlaPa7/TXgTqY11QgTX7WGkTFKFoBESbLYMYM9b8jWAVZ6dAC5Vs46Byw1zqru64r0LOJErIv1F/mSTlYmJLMrFszTbE5uxaBrJpMAXMXZF5l4eiSAAAAAElFTkSuQmCC" alt="star" />
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAARNJREFUeAGVksFKw0AQhmdmE7LVIiL0HhTBkzl7Ejx4ELFvoOCDKM0b2DeoT6Cg4GMkRy2CvkBJ9NCI3Z1uCps27UKbgYVhd775d/8dZGYCR/y+HN0Qad6++Hh0naMLzF+PQ1LjzzL35da+PE+/l2ucaqSKO5v/F+P7jRQX1Wy4VDF/O9nDYtRF1BED7ALoU7Md1vvzF4BIESBhFqnf8hPMnw4TRI6gWTyba+IAGkapTDvd9wck6DWAeu2rYTwzpn05jDeBLVTmlaPa7/TXgTqY11QgTX7WGkTFKFoBESbLYMYM9b8jWAVZ6dAC5Vs46Byw1zqru64r0LOJErIv1F/mSTlYmJLMrFszTbE5uxaBrJpMAXMXZF5l4eiSAAAAAElFTkSuQmCC" alt="star" />
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAP1JREFUeAGVksENgjAUhltpAhcS4wREB2ADTEzg6gaaOIgGNpANcANvHIgzwAAmsgEn4AL41whWbARe0vDS/33vp32lTdPMiCSiKNpDa2zbvsh0KgMBGXVd33muadrSsqy0XyN1A3Rs87IsT6McRbc2ZK40DMOFoijbqqpMSukce2sso2fwgEECPcZKVFWNGZIbHDhE/oQBnTfbogEpiuLKfzMgE4M7zxzHOSN3J3AuGO91MTwZCbvv2s84dF33hyicr6vpwDzPzSGQMWb+gOj2BeICMuylPUcpaLQAPi5GtMJ8N0S4dRFkgoMPIcNwA+GV8CYHvCYPjXZca+ufEdN2srXHdg4AAAAASUVORK5CYII=" alt="star" />
+                    </div>
+                    <span class="review-card__date">11-Июня-2026</span>
+                    <p class="review-card__text">
+                      Поездка очень понравилась! Усадьба Огинского, которого
+                      знают все, но о нем знают меньше. Быт белорусской усадьбы
+                      атмосфере. Три очень интересных костела, православный
+                      храм.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-reviews__slide">
+              <div class="review-card">
+                <div class="review-card__header">
+                  <img
+                    src="/Ekskursii-by-portal/assets/avatar-FDvFy_8V.png"
+                    alt="Марина"
+                    class="review-card__avatar"
+                  />
+                  <div class="review-card__info">
+                    <h3 class="review-card__name">
+                      Марина,
+                      <span class="review-card__city">Санкт-Петербург</span>
+                    </h3>
+                    <div class="review-card__stars">
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAARNJREFUeAGVksFKw0AQhmdmE7LVIiL0HhTBkzl7Ejx4ELFvoOCDKM0b2DeoT6Cg4GMkRy2CvkBJ9NCI3Z1uCps27UKbgYVhd775d/8dZGYCR/y+HN0Qad6++Hh0naMLzF+PQ1LjzzL35da+PE+/l2ucaqSKO5v/F+P7jRQX1Wy4VDF/O9nDYtRF1BED7ALoU7Md1vvzF4BIESBhFqnf8hPMnw4TRI6gWTyba+IAGkapTDvd9wck6DWAeu2rYTwzpn05jDeBLVTmlaPa7/TXgTqY11QgTX7WGkTFKFoBESbLYMYM9b8jWAVZ6dAC5Vs46Byw1zqru64r0LOJErIv1F/mSTlYmJLMrFszTbE5uxaBrJpMAXMXZF5l4eiSAAAAAElFTkSuQmCC" alt="star" />
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAARNJREFUeAGVksFKw0AQhmdmE7LVIiL0HhTBkzl7Ejx4ELFvoOCDKM0b2DeoT6Cg4GMkRy2CvkBJ9NCI3Z1uCps27UKbgYVhd775d/8dZGYCR/y+HN0Qad6++Hh0naMLzF+PQ1LjzzL35da+PE+/l2ucaqSKO5v/F+P7jRQX1Wy4VDF/O9nDYtRF1BED7ALoU7Md1vvzF4BIESBhFqnf8hPMnw4TRI6gWTyba+IAGkapTDvd9wck6DWAeu2rYTwzpn05jDeBLVTmlaPa7/TXgTqY11QgTX7WGkTFKFoBESbLYMYM9b8jWAVZ6dAC5Vs46Byw1zqru64r0LOJErIv1F/mSTlYmJLMrFszTbE5uxaBrJpMAXMXZF5l4eiSAAAAAElFTkSuQmCC" alt="star" />
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAARNJREFUeAGVksFKw0AQhmdmE7LVIiL0HhTBkzl7Ejx4ELFvoOCDKM0b2DeoT6Cg4GMkRy2CvkBJ9NCI3Z1uCps27UKbgYVhd775d/8dZGYCR/y+HN0Qad6++Hh0naMLzF+PQ1LjzzL35da+PE+/l2ucaqSKO5v/F+P7jRQX1Wy4VDF/O9nDYtRF1BED7ALoU7Md1vvzF4BIESBhFqnf8hPMnw4TRI6gWTyba+IAGkapTDvd9wck6DWAeu2rYTwzpn05jDeBLVTmlaPa7/TXgTqY11QgTX7WGkTFKFoBESbLYMYM9b8jWAVZ6dAC5Vs46Byw1zqru64r0LOJErIv1F/mSTlYmJLMrFszTbE5uxaBrJpMAXMXZF5l4eiSAAAAAElFTkSuQmCC" alt="star" />
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAARNJREFUeAGVksFKw0AQhmdmE7LVIiL0HhTBkzl7Ejx4ELFvoOCDKM0b2DeoT6Cg4GMkRy2CvkBJ9NCI3Z1uCps27UKbgYVhd775d/8dZGYCR/y+HN0Qad6++Hh0naMLzF+PQ1LjzzL35da+PE+/l2ucaqSKO5v/F+P7jRQX1Wy4VDF/O9nDYtRF1BED7ALoU7Md1vvzF4BIESBhFqnf8hPMnw4TRI6gWTyba+IAGkapTDvd9wck6DWAeu2rYTwzpn05jDeBLVTmlaPa7/TXgTqY11QgTX7WGkTFKFoBESbLYMYM9b8jWAVZ6dAC5Vs46Byw1zqru64r0LOJErIv1F/mSTlYmJLMrFszTbE5uxaBrJpMAXMXZF5l4eiSAAAAAElFTkSuQmCC" alt="star" />
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAP1JREFUeAGVksENgjAUhltpAhcS4wREB2ADTEzg6gaaOIgGNpANcANvHIgzwAAmsgEn4AL41whWbARe0vDS/33vp32lTdPMiCSiKNpDa2zbvsh0KgMBGXVd33muadrSsqy0XyN1A3Rs87IsT6McRbc2ZK40DMOFoijbqqpMSukce2sso2fwgEECPcZKVFWNGZIbHDhE/oQBnTfbogEpiuLKfzMgE4M7zxzHOSN3J3AuGO91MTwZCbvv2s84dF33hyicr6vpwDzPzSGQMWb+gOj2BeICMuylPUcpaLQAPi5GtMJ8N0S4dRFkgoMPIcNwA+GV8CYHvCYPjXZca+ufEdN2srXHdg4AAAAASUVORK5CYII=" alt="star" />
+                    </div>
+                    <span class="review-card__date">11-Июня-2026</span>
+                    <p class="review-card__text">
+                      Поездка очень понравилась! Усадьба Огинского, которого
+                      знают все, но о нем знают меньше. Быт белорусской усадьбы
+                      атмосфере. Три очень интересных костела, православный
+                      храм.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-reviews__slide">
+              <div class="review-card">
+                <div class="review-card__header">
+                  <img
+                    src="/Ekskursii-by-portal/assets/avatar-FDvFy_8V.png"
+                    alt="Марина"
+                    class="review-card__avatar"
+                  />
+                  <div class="review-card__info">
+                    <h3 class="review-card__name">
+                      Марина,
+                      <span class="review-card__city">Санкт-Петербург</span>
+                    </h3>
+                    <div class="review-card__stars">
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAARNJREFUeAGVksFKw0AQhmdmE7LVIiL0HhTBkzl7Ejx4ELFvoOCDKM0b2DeoT6Cg4GMkRy2CvkBJ9NCI3Z1uCps27UKbgYVhd775d/8dZGYCR/y+HN0Qad6++Hh0naMLzF+PQ1LjzzL35da+PE+/l2ucaqSKO5v/F+P7jRQX1Wy4VDF/O9nDYtRF1BED7ALoU7Md1vvzF4BIESBhFqnf8hPMnw4TRI6gWTyba+IAGkapTDvd9wck6DWAeu2rYTwzpn05jDeBLVTmlaPa7/TXgTqY11QgTX7WGkTFKFoBESbLYMYM9b8jWAVZ6dAC5Vs46Byw1zqru64r0LOJErIv1F/mSTlYmJLMrFszTbE5uxaBrJpMAXMXZF5l4eiSAAAAAElFTkSuQmCC" alt="star" />
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAARNJREFUeAGVksFKw0AQhmdmE7LVIiL0HhTBkzl7Ejx4ELFvoOCDKM0b2DeoT6Cg4GMkRy2CvkBJ9NCI3Z1uCps27UKbgYVhd775d/8dZGYCR/y+HN0Qad6++Hh0naMLzF+PQ1LjzzL35da+PE+/l2ucaqSKO5v/F+P7jRQX1Wy4VDF/O9nDYtRF1BED7ALoU7Md1vvzF4BIESBhFqnf8hPMnw4TRI6gWTyba+IAGkapTDvd9wck6DWAeu2rYTwzpn05jDeBLVTmlaPa7/TXgTqY11QgTX7WGkTFKFoBESbLYMYM9b8jWAVZ6dAC5Vs46Byw1zqru64r0LOJErIv1F/mSTlYmJLMrFszTbE5uxaBrJpMAXMXZF5l4eiSAAAAAElFTkSuQmCC" alt="star" />
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAARNJREFUeAGVksFKw0AQhmdmE7LVIiL0HhTBkzl7Ejx4ELFvoOCDKM0b2DeoT6Cg4GMkRy2CvkBJ9NCI3Z1uCps27UKbgYVhd775d/8dZGYCR/y+HN0Qad6++Hh0naMLzF+PQ1LjzzL35da+PE+/l2ucaqSKO5v/F+P7jRQX1Wy4VDF/O9nDYtRF1BED7ALoU7Md1vvzF4BIESBhFqnf8hPMnw4TRI6gWTyba+IAGkapTDvd9wck6DWAeu2rYTwzpn05jDeBLVTmlaPa7/TXgTqY11QgTX7WGkTFKFoBESbLYMYM9b8jWAVZ6dAC5Vs46Byw1zqru64r0LOJErIv1F/mSTlYmJLMrFszTbE5uxaBrJpMAXMXZF5l4eiSAAAAAElFTkSuQmCC" alt="star" />
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAARNJREFUeAGVksFKw0AQhmdmE7LVIiL0HhTBkzl7Ejx4ELFvoOCDKM0b2DeoT6Cg4GMkRy2CvkBJ9NCI3Z1uCps27UKbgYVhd775d/8dZGYCR/y+HN0Qad6++Hh0naMLzF+PQ1LjzzL35da+PE+/l2ucaqSKO5v/F+P7jRQX1Wy4VDF/O9nDYtRF1BED7ALoU7Md1vvzF4BIESBhFqnf8hPMnw4TRI6gWTyba+IAGkapTDvd9wck6DWAeu2rYTwzpn05jDeBLVTmlaPa7/TXgTqY11QgTX7WGkTFKFoBESbLYMYM9b8jWAVZ6dAC5Vs46Byw1zqru64r0LOJErIv1F/mSTlYmJLMrFszTbE5uxaBrJpMAXMXZF5l4eiSAAAAAElFTkSuQmCC" alt="star" />
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAP1JREFUeAGVksENgjAUhltpAhcS4wREB2ADTEzg6gaaOIgGNpANcANvHIgzwAAmsgEn4AL41whWbARe0vDS/33vp32lTdPMiCSiKNpDa2zbvsh0KgMBGXVd33muadrSsqy0XyN1A3Rs87IsT6McRbc2ZK40DMOFoijbqqpMSukce2sso2fwgEECPcZKVFWNGZIbHDhE/oQBnTfbogEpiuLKfzMgE4M7zxzHOSN3J3AuGO91MTwZCbvv2s84dF33hyicr6vpwDzPzSGQMWb+gOj2BeICMuylPUcpaLQAPi5GtMJ8N0S4dRFkgoMPIcNwA+GV8CYHvCYPjXZca+ufEdN2srXHdg4AAAAASUVORK5CYII=" alt="star" />
+                    </div>
+                    <span class="review-card__date">11-Июня-2026</span>
+                    <p class="review-card__text">
+                      Поездка очень понравилась! Усадьба Огинского, которого
+                      знают все, но о нем знают меньше. Быт белорусской усадьбы
+                      атмосфере. Три очень интересных костела, православный
+                      храм.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reviews__controls">
+          <button
+            class="reviews__arrow reviews__arrow--prev"
+            id="review-prev"
+            aria-label="Предыдущий отзыв"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+            >
+              <path
+                d="M13.4815 4.8519C13.1235 4.49392 12.5431 4.49392 12.1852 4.8519L6.68515 10.3519C6.51324 10.5238 6.41667 10.757 6.41667 11.0001C6.41667 11.2432 6.51324 11.4764 6.68515 11.6483L12.1851 17.1483C12.5431 17.5062 13.1235 17.5062 13.4815 17.1483C13.8395 16.7903 13.8395 16.2099 13.4815 15.8519L8.62969 11.0001L13.4815 6.14826C13.8395 5.79028 13.8395 5.20988 13.4815 4.8519Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+          <button
+            class="reviews__arrow reviews__arrow--next"
+            id="review-next"
+            aria-label="Следующий отзыв"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+            >
+              <path
+                d="M8.51849 4.8519C8.87647 4.49392 9.45687 4.49392 9.81485 4.8519L15.3148 10.3519C15.4868 10.5238 15.5833 10.757 15.5833 11.0001C15.5833 11.2432 15.4868 11.4764 15.3148 11.6483L9.81485 17.1483C9.45687 17.5062 8.87647 17.5062 8.51849 17.1483C8.16051 16.7903 8.16051 16.2099 8.51849 15.8519L13.3703 11.0001L8.51849 6.14826C8.1605 5.79028 8.1605 5.20988 8.51849 4.8519Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__main">
+          <div class="footer__contacts">
+            <a href="#" class="footer__logo">
+              <img src="/Ekskursii-by-portal/assets/logo-full-3tK3Eyd0.png" alt="Ekskursii.by" />
+            </a>
+            <h4 class="footer__subtitle">Контакты</h4>
+            <ul class="footer__phones">
+              <li>
+                <a href="tel:+375173944913" class="footer__link">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAMxJREFUeAGlk2ERwjAMhTMUTEIcMAlMAThgDsABEpDA4QAHHAqYgw0Fw0F49NqDGw1ttnf3bj/afOleUyIvEWngI8w0VR4S1E2G+WKZBUPBRuJ6w8pczgJeKmsMr8kA0vSEb2QAPZS1uiiKngygi+8+FpNVCHWvhM1kFYquEdjdcnMBxPI7TwHGX/tKPzL8D1bBg/Kb21GzLgVrRNdgyjEBEyusknhmMZ3UycYwtvjUcEtp5exxpzuIntnONaZM+RxW9HnkPXzGyd2reAGm054C5LpdSwAAAABJRU5ErkJggg==" alt="Телефон" /> +375
+                  17 394-49-13
+                </a>
+              </li>
+              <li>
+                <a href="tel:+375297566665" class="footer__link">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAMxJREFUeAGlk2ERwjAMhTMUTEIcMAlMAThgDsABEpDA4QAHHAqYgw0Fw0F49NqDGw1ttnf3bj/afOleUyIvEWngI8w0VR4S1E2G+WKZBUPBRuJ6w8pczgJeKmsMr8kA0vSEb2QAPZS1uiiKngygi+8+FpNVCHWvhM1kFYquEdjdcnMBxPI7TwHGX/tKPzL8D1bBg/Kb21GzLgVrRNdgyjEBEyusknhmMZ3UycYwtvjUcEtp5exxpzuIntnONaZM+RxW9HnkPXzGyd2reAGm054C5LpdSwAAAABJRU5ErkJggg==" alt="Мобильный" /> +375
+                  29 756-66-65
+                </a>
+              </li>
+            </ul>
+            <div class="footer__socials">
+              <a href="#" class="footer__social-link"
+                ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAtFJREFUeAG1VV9IU1EY/+6ooW3BNWG2HnQb+FAqTHtQiEhyTwXhQw8VQQN9zd7tYQsiqJfKV4NRUCk+xCB8cROLHgyajYoCtV3zwbmF28gNly/H7zu7nm3Xe/dP/MG3e3a+c77fOd/5/khQAYwxGT/DKJdQBlFkVQhRVRYkSXoJ9YKMo/hR0qw2KLS+HgKHuqkRKLS/GoG7jtMbgfa7K93gsASlRI5921IJiYIfh5Y8l/8P4cgqKPEtSKSzYt7SbIYepx0GzrWDreWk3rnXUHoxKDKSSuDHj0+7avL9IswvrcJAVwd0o8G2FqvQxTa2IBZPoX4Fblx2wy1Pnx6RH0keiFto7xv6ssxGnkyzRGq7bD6R+seyO3nxfxP1YxPvWPDTDyO3yUTg1dOOPJ5m32NxPn49FxFGvv3e4ONQZFmspTk6kAHumKCQaGVIou9z+V100WlAIpiaj8Lb8Fec3wbXmVauAwYQRlcRelx2yO3sQjKT1XPZIJEcCLeEaozgsreCpcnMH5rihMYnmsxcR4b3YcP3SqbrICkFGb92oQtsspUbInj6OqEbT++0nxKnt6jEOpBNUANuDvVyF70JLQlia/Nx7iYirwL5GP5koFj0ONow7sllpRi/7YH7k7PwF0+eRTcpmykYvdqPedLB9eQqo9uYVJIykFvI3/yBBbEVnt8dxveW4POvdW50CoOBQAeiteQ+HUQphAN6cYeuYU9nPujGJOUGJqrIoYev5tizmY9GIRyQKE+QLaClp5uMv5jldWfs+kUeZUKHpYb0iz/XUf7wx380ekUEhgZeiRUaE9UtWW9FOLLCKxzVqHsTwbJoojDvP9sOQ+c7jd5jDcuKk4+QyMcqgLKbslxbYmpAsR6yQidUjFbS+zRAoBy4FzvCfqIlOtrOqLmRwhqDwqr1eA2Zj9VOllbX60aoVAOZFwrtwA3FYppRZUGVILVZIxt79lOknEGCj3UAAAAASUVORK5CYII=" alt="Viber"
+              /></a>
+              <a href="#" class="footer__social-link"
+                ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAgFJREFUeAG9VjtPAkEQHgwxGjU5LFA6zsRKC9TCwuCz00RNtLGSQmv9B9DYm1haqDHR1kcrRhOfhWIiaIHxCA1qgcRAQJp15jhODrjlOMEvmWVvdme+mW+zdwBwwBgT0GbRttAktE/2i4DiXwSzwGBfUVIeJNpfTXKnEmQGEsVXInBVUb0eKN7F6+CvBIVEznxuSwGJhD9OqB0iFotFpEmDQuCrMQGBlPGqT8z8QbNkOsMOL4LsPf6lJ5tgxcFjpovH1xjs+wMQlN7k549EEpamBou3CWgjVhrAIFKZbzi8CMHx1RPOs5q1lqZGvbBZInGBgaqPLkNw+xxVfdNDPeC/C6tkXY52vfBRXRKq+iYUBf99WJWEYLe1wur8MFyHIppu7LY2PRLBWs67d3JfVhKqfmGiDzaPb+A08KJZE/U7kUkSkDugXAfpLB5iSrMrX73osMHa7ommMwJHKhklJC3NjZjQjTO3moyqpINd2TgAKRYvScKRivBAJGdonnKrvWKnOqcOycpB5HfyQDf+AAyAOlxbnoTx/u6StQpynRHJOeQkq4gO+WzcsDLnBrvQqvo5ctH7a8eKQwJv/To6fGAQEwPd0NvlkG88gSPXNg3/9xZWMAYGZTOAhJKvFKzeX8YCovp+44vIvMw4GVXvBbPAYA/L/b8KFCWVFP8MmsDL8QPUxQLpJKfxmgAAAABJRU5ErkJggg==" alt="Telegram"
+              /></a>
+              <a href="#" class="footer__social-link"
+                ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAtxJREFUeAG1VU1IVFEUPk9ECg2mAssWNUouyoLRFkVRSbrJhbWQwGgxkG3DVYtcOBEJ0SJpq4sCIcpFWIErY/pl2qSQY5uYGV04o+DMkIo5m9v5zrw3c+d5X80kfnDefe/ed893/u65Fv0FSikfD1dZLrK0s/hsAWZsCVuW9YwqBZSzhFgyqjzE8X8lBH570/8gjv3/IghUYL0XsD+g67V0D3iYpmLMS7D+e5Nii2lazqzJd/3eOjrZ1OBlb5allXOVcJPEefCblE98itKbL3P8nmPle2R+ObMqRJdaj9L1zjYTUcImylo2QYiHQfdfS6xoYGRSTOnvuUCNDfuodleNTZ6jSHSenk9Ny/pQ3+WCARpCTHKv4IU7sKn0L3Xz4Qv1ePyDWtvY9ExAKr2qbj95JeKRH18VP4KmMDkW9vecJyahyNw8mXCAQ3b3RqfkSvaUAvm9UkX5g7YlTO++/ZQQOYRDY1P0PZb0JOo+10KvP0dNy+0gCbhn48m0xP5E40H5no2lZPz6Y4G80H22RfKEvWWTNB3aX/juONWcH9uaPUlqd9eIYbHkinvJV0VlAFbW++po5G2kMIfSNqHOrj43SdY9C4WxxZUSKx/c6pLk9j16KbkZHv8o705BII/6OdJhJDlz/Ihs0BON5IKIFNHA6KTkB6Sz8Xy+kDccTpwlF2aq+RFmCeqzsPz0scNyyvXWAaLRO9dEMTxADlBV8AIV6OTORPLeTQLAEz35OlB1TuUhNyhvnKnejlbT72FL5S8m9K1CY1zfyFHv/THZBCVLHBZUFsJYNIIPaHRBaytdEi4XEtxWGqvRwJhomCdCzopThlCAcCEssBYjFMEIeAogXJDarVUFPMXDaZDwAj3Bj28knMlLGiK8SfD5QfwBhFJfN0C8KJlR+RtxuxeW3hj9Rmq1QzejiWhn73gX2aAqnyxj/2+8uq0yyIKUvw4CVGymWVvCtkygSr10/AGQtUIVEQ+zCAAAAABJRU5ErkJggg==" alt="WhatsApp"
+              /></a>
+            </div>
+          </div>
+          <div class="footer__info">
+            <p class="footer__company-name">
+              © Частное научно-производственное унитарное предприятие <br />
+              "Автоматизированные технологии туризма"
+            </p>
+            <p class="footer__legal-text">
+              Свидетельство о регистрации №1808 от 9.08.2007 выдано Минским
+              горисполкомом. УНП: 190855081 Сертификат соответствия
+              туристических услуг СТБ № BY/112 04.03. 071.01 00099 выдан
+              Национальным агентством по туризму РБ, действителен до 22.10.2029
+              г.
+            </p>
+          </div>
+        </div>
+        <hr class="footer__line" />
+        <div class="footer__bottom">
+          <p>
+            © 2007-2026 Частное научно-производственное унитарное предприятие
+            "Автоматизированные технологии туризма"
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
