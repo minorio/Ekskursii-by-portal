@@ -1,9 +1,9 @@
-@import "variables";
-@import "components/header";
-@import "components/hero";
-@import "components/schedule";
-@import "components/reviews";
-@import "components/footer";
+@use "variables";
+@use "components/header";
+@use "components/hero";
+@use "components/schedule";
+@use "components/reviews";
+@use "components/footer";
 
 * {
   box-sizing: border-box;
